@@ -7,12 +7,13 @@ public class CameraDetection : MonoBehaviour
 
     private float Timer;
     private bool timerStarter;
+    public CountDownTimer CT;
     
     // Update is called once per frame
     void Update()
     {
+
        
-      
        
        if(timerStarter == true)
        {
@@ -21,12 +22,13 @@ public class CameraDetection : MonoBehaviour
        else if(timerStarter == false)
        {
            Timer = 0;
-           Debug.Log("You have been Reset");
+           
        }
 
         if(Timer >= 2)
         {
             Debug.Log("You have been caught");
+            CT.GetComponent<CountDownTimer>().Spotted();
         }
     }
 
@@ -36,13 +38,18 @@ public class CameraDetection : MonoBehaviour
         {
             timerStarter = true;
         }
-        else
+    }
+    
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
             timerStarter = false;
-        }   
+            Debug.Log("Lost Vision");
+        }
     }
 
-  
 
 
 }
