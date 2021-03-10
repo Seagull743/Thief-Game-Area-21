@@ -33,6 +33,7 @@ public class CountDownTimer : MonoBehaviour
         if(currentTime <= 0)
         {
             currentTime = 0;
+            CountDownText.enabled = false;
             PA.GetComponent<PlayerGettingArrested>().DoAnim();
         }
     }
