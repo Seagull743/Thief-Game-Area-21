@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8683986435230862853}
   - component: {fileID: 5705053791925043616}
   - component: {fileID: 7550455730522879338}
+  - component: {fileID: 1621692343138312143}
+  - component: {fileID: 2262890974308472822}
   m_Layer: 0
   m_Name: Swipe Card
   m_TagString: Untagged
@@ -25,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8343031609474110655}
-  m_LocalRotation: {x: -0, y: -0.62216604, z: -0, w: 0.7828854}
-  m_LocalPosition: {x: 20.720871, y: 28.90097, z: 16.824888}
+  m_LocalRotation: {x: 0.5005111, y: -0.5005111, z: -0.49948835, w: 0.49948835}
+  m_LocalPosition: {x: 15.955812, y: 0.225, z: 0.33947706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -76.949, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.117, z: -90}
 --- !u!33 &5705053791925043616
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -81,3 +83,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1621692343138312143
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8343031609474110655}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010947705, y: 0.57936287, z: 1.0000001}
+  m_Center: {x: -0.0000000051222746, y: -0.00000023841858, z: -0.00000022351745}
+--- !u!114 &2262890974308472822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8343031609474110655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a478efb7256bfa1469632b77feae494c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedCollider: {fileID: 0}

@@ -15,10 +15,16 @@ public class GM : MonoBehaviour
     private GameObject normalcross;
     [SerializeField] private InteractiveObject currentObj;
 
-
-
+    [SerializeField] private GameObject doorLockedText;
+    
+  
+  
+  
     void Awake()
     {
+        
+        doorLockedText.SetActive(false);
+        
         if(instance == null)
         {
             instance = this;
@@ -62,6 +68,18 @@ public class GM : MonoBehaviour
     public InteractiveObject GetCurrentInteractiveObj()
     {
         return currentObj;
+    }
+
+     public void LockedDoor()
+    {
+         StartCoroutine(LockedText());
+    }
+    
+    IEnumerator LockedText()
+    {
+        doorLockedText.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        doorLockedText.SetActive(false);
     }
 
 

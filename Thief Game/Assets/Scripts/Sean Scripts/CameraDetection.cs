@@ -8,7 +8,17 @@ public class CameraDetection : MonoBehaviour
     private float Timer;
     private bool timerStarter;
     public CountDownTimer CT;
+
+    public Animator animator;
     
+    void Start()
+    {
+        animator = GetComponentInParent<Animator>();
+        Onanim();
+    }
+    
+   
+   
     // Update is called once per frame
     void Update()
     {
@@ -40,7 +50,17 @@ public class CameraDetection : MonoBehaviour
         }
     }
     
-    
+    public void Onanim()
+    {
+         animator.SetBool("camOn", true);
+    }
+
+    public void offanim()
+    {
+        animator.SetBool("camoff", false);
+        animator.SetBool("camOn", false);
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
