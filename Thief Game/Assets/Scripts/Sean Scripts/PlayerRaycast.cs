@@ -7,7 +7,7 @@ public class PlayerRaycast : MonoBehaviour
 
     public Transform playerCam;
 
-    public static float maxDistance;
+    public static float maxDistance = 3f;
 
 
     // Update is called once per frame
@@ -15,7 +15,11 @@ public class PlayerRaycast : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Pressed();
+            InteractiveObject i = GM.instance.GetCurrentInteractiveObj();
+            if(null != i)
+            {
+                i.PlayerInteraction();
+            }
         }
 
     }
@@ -26,7 +30,9 @@ public class PlayerRaycast : MonoBehaviour
 
         if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit, maxDistance))
         {
+
             GameObject hitObject = hit.transform.gameObject;
+            Debug.Log(hitObject.name);
 
             if (hitObject.GetComponent<InteractiveObject>())
             {

@@ -7,7 +7,7 @@ public class InteractiveObject : MonoBehaviour
    
     public virtual void PlayerInteraction()
     {
-
+        Debug.Log(gameObject.name);
     }
 
     void OnMouseOver()
@@ -15,12 +15,15 @@ public class InteractiveObject : MonoBehaviour
         if(Vector3.Distance(gameObject.transform.position, GM.instance.player.transform.position) <= PlayerRaycast.maxDistance)
         {
             GM.instance.InteractCross();
+            GM.instance.SetCurrentObj(gameObject.GetComponent<InteractiveObject>());
         }
     }
 
     private void OnMouseExit()
     {
         GM.instance.Normalcross();
+        GM.instance.RemoveCurrentObj(gameObject.GetComponent<InteractiveObject>());
+
     }
 
 }

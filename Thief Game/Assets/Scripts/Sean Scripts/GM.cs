@@ -13,6 +13,7 @@ public class GM : MonoBehaviour
     private GameObject interactcross;
     [SerializeField]
     private GameObject normalcross;
+    [SerializeField] private InteractiveObject currentObj;
 
 
 
@@ -26,6 +27,10 @@ public class GM : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        interactcross.SetActive(false);
+        normalcross.SetActive(true);
+    
     }
 
     public void Normalcross()
@@ -41,6 +46,23 @@ public class GM : MonoBehaviour
         normalcross.SetActive(false);
     }
 
+    public void SetCurrentObj(InteractiveObject i)
+    {
+        currentObj = i;
+    }
+
+    public void RemoveCurrentObj(InteractiveObject i)
+    {
+        if(currentObj == i)
+        {
+            currentObj = null;
+        }
+    }
+
+    public InteractiveObject GetCurrentInteractiveObj()
+    {
+        return currentObj;
+    }
 
 
 }
