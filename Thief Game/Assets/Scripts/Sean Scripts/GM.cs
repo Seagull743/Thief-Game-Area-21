@@ -7,7 +7,8 @@ public class GM : MonoBehaviour
 
     public static GM instance;
     public GameObject player;
-    
+
+    public Transform Playercam;
     
     [SerializeField]
     private GameObject interactcross;

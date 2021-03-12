@@ -12,7 +12,7 @@ public class InteractiveObject : MonoBehaviour
 
     void OnMouseOver()
     {
-        if(Vector3.Distance(gameObject.transform.position, GM.instance.player.transform.position) <= PlayerRaycast.maxDistance)
+        if(Vector3.Distance(gameObject.transform.position, GM.instance.Playercam.position) <= PlayerRaycast.maxDistance)
         {
             GM.instance.InteractCross();
             GM.instance.SetCurrentObj(gameObject.GetComponent<InteractiveObject>());
