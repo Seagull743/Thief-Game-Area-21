@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isCrouching;
     private bool isSprinting;
+    private float lerpHeight;
 
     public float crouchSpeed = -3.0f;
 
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()    {
         playerCol.GetComponent<CharacterController>();
         originalHeight = playerCol.height;
+        lerpHeight = originalHeight;
         isCrouching = false;
         isWalking = false;
     }
@@ -125,8 +127,14 @@ public class PlayerMovement : MonoBehaviour
             unCrouch();
         }
 
+       // Vector3 scale = transform.localScale;
+        //scale.y = Mathf.Lerp(scale.y, lerpHeight, 0.2f * Time.deltaTime);
+        //transform.localScale = scale;
+        playerCol.height = Mathf.Lerp(playerCol.height, lerpHeight, 0.1f);
+
         //Camera Bobbing
 
+        
         // Set time and offset to 0
         if (!isWalking)
         {
@@ -145,21 +153,24 @@ public class PlayerMovement : MonoBehaviour
         if ((cameraTransform.position - targetCameraPosition).magnitude <= 0.001) cameraTransform.position = targetCameraPosition;
 
     }
-        private void Crouch()
-        {
-            playerCol.height = reducedHeight;
-            isSprinting = false;
-            isCrouching = true;
-            speed = 3;
-            bobFrequency = 1.5f;
-        }
+    private void Crouch()
+    {
+        
+        
+        lerpHeight = reducedHeight;
+        isSprinting = false;
+        isCrouching = true;
+        speed = 3;
+        bobFrequency = 1.5f;
+    }
 
-        public void unCrouch()
-        {
-            playerCol.height = originalHeight;
-            isCrouching = false;
-            speed = 6;
-            bobFrequency = 3f;
+    public void unCrouch()
+    {
+        
+        lerpHeight = originalHeight;
+        isCrouching = false;
+        speed = 6;
+        bobFrequency = 3f;
     }
 
     //CameraBobbing
