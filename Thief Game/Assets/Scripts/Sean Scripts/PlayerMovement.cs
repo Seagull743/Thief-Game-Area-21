@@ -155,13 +155,16 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Crouch()
     {
-        
-        
-        lerpHeight = reducedHeight;
-        isSprinting = false;
-        isCrouching = true;
-        speed = 3;
-        bobFrequency = 1.5f;
+
+        if (isGrounded)
+        {
+            lerpHeight = reducedHeight;
+            isSprinting = false;
+            isCrouching = true;
+            speed = 3;
+            bobFrequency = 1.5f;
+        }
+                            
     }
 
     public void unCrouch()
@@ -171,6 +174,7 @@ public class PlayerMovement : MonoBehaviour
         isCrouching = false;
         speed = 6;
         bobFrequency = 3f;
+
     }
 
     //CameraBobbing
