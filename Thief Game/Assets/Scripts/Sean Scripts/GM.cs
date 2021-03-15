@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GM : MonoBehaviour
 {
@@ -17,7 +18,13 @@ public class GM : MonoBehaviour
     [SerializeField] private InteractiveObject currentObj;
 
     [SerializeField] private GameObject doorLockedText;
-    
+
+
+
+
+// for score
+    [SerializeField] public Text scoreText;
+    [SerializeField] public static int theScore;
   
   
   
@@ -38,6 +45,11 @@ public class GM : MonoBehaviour
         interactcross.SetActive(false);
         normalcross.SetActive(true);
     
+    }
+
+    void Update()
+    {
+        scoreText.text = "Collected: " + theScore;
     }
 
     public void Normalcross()

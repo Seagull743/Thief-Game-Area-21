@@ -49,3 +49,4 @@ MonoBehaviour:
   normalcross: {fileID: 0}
   currentObj: {fileID: 0}
   doorLockedText: {fileID: 0}
+  scoreText: {fileID: 0}
