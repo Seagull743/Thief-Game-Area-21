@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
     private float walkingTime;
     private Vector3 targetCameraPosition;
 
+    public PostProcessingScript PPS;
 
 
     void Start()    {
@@ -163,6 +164,7 @@ public class PlayerMovement : MonoBehaviour
             isCrouching = true;
             speed = 3;
             bobFrequency = 1.5f;
+            PPS.GetComponent<PostProcessingScript>().Crouchvignette();
         }
                             
     }
@@ -174,6 +176,7 @@ public class PlayerMovement : MonoBehaviour
         isCrouching = false;
         speed = 6;
         bobFrequency = 3f;
+        PPS.GetComponent<PostProcessingScript>().unCoruchvignette();
 
     }
 
