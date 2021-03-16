@@ -10,9 +10,12 @@ public class Alarm : MonoBehaviour
     public GameObject light2;
     public bool Spotted = false;
 
+
     //Cam Lights
     public GameObject camlight1;
     public GameObject camelight2;
+
+    public CountDownTimer CDT;
 
      void Start()
     {
@@ -29,13 +32,22 @@ public class Alarm : MonoBehaviour
       
     }
 
-    public void StartSpinning()
+    public void spinning()
     {
         Spotted = true;
         light1.SetActive(true);
         light2.SetActive(true);
+        CDT.GetComponent<CountDownTimer>().Spotted();
+    }
+
+
+    public void StartSpinning()
+    {    
         camlight1.SetActive(false);
         camelight2.SetActive(false);
+        Invoke("spinning", 2.0f);
+
+        
     }
 
 

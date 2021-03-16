@@ -7,9 +7,7 @@ public class KeyCard : InteractiveObject
    
     public GameObject lockedCollider;
     public override void PlayerInteraction()
-    {
-        base.PlayerInteraction();
-       
+    {     
         GotKeyCard();
     }
 

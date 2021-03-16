@@ -8,19 +8,37 @@ public class PlayerRaycast : MonoBehaviour
     public Transform playerCam;
 
     public static float maxDistance = 3f;
+    public GM gm;
+    public LayerMask playerLayer;
+
 
 
     // Update is called once per frame
     void Update()
     {
+
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
-            InteractiveObject i = GM.instance.GetCurrentInteractiveObj();
-            if(null != i)
-            {
-                i.PlayerInteraction();
-            }
+            Pressed();
         }
+
+        RaycastHit hit;
+        if(Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit, maxDistance, ~playerLayer))
+        {
+            var Selection = hit.transform;
+            var SelectionComponent = Selection.GetComponent<InteractiveObject>();
+            if(SelectionComponent != null)
+            {
+                gm.InteractCross();
+            }
+          
+        }
+        else
+        {
+            gm.Normalcross();
+        }
+       
 
     }
 
@@ -28,7 +46,7 @@ public class PlayerRaycast : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit, maxDistance))
+        if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit, maxDistance, ~playerLayer))
         {
 
             GameObject hitObject = hit.transform.gameObject;
@@ -38,12 +56,11 @@ public class PlayerRaycast : MonoBehaviour
             {
                 hitObject.GetComponent<InteractiveObject>().PlayerInteraction();
             }
-        
-        
         }
-
-
-
-
     }
 }
+
+
+
+    
+

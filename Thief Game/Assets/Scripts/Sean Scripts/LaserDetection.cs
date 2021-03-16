@@ -5,13 +5,13 @@ using UnityEngine;
 public class LaserDetection : MonoBehaviour
 {
 
-    public CountDownTimer CDT;
+    public Alarm alarm;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            CDT.GetComponent<CountDownTimer>().Spotted();
+            alarm.GetComponent<Alarm>().StartSpinning(); 
         }
     }
 

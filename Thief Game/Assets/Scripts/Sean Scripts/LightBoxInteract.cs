@@ -15,8 +15,6 @@ public class LightBoxInteract : InteractiveObject
     }
 
 
-
-
     public override void PlayerInteraction()
     {
         

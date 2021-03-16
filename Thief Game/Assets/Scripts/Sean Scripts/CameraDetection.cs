@@ -7,7 +7,7 @@ public class CameraDetection : MonoBehaviour
 
     private float Timer;
     private bool timerStarter;
-    public CountDownTimer CT;
+    public Alarm alarm;
     
 
     
@@ -34,8 +34,8 @@ public class CameraDetection : MonoBehaviour
         if(Timer >= 0.3)
         {
             Debug.Log("You have been caught");
-            CT.GetComponent<CountDownTimer>().Spotted();
-            
+            alarm.GetComponent<Alarm>().StartSpinning();
+
         }
     }
 

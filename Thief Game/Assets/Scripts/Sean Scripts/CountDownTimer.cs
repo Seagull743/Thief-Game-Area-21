@@ -41,8 +41,7 @@ public class CountDownTimer : MonoBehaviour
 
     public void Spotted()
     {
-        spotted = true;
-        alarm.GetComponent<Alarm>().StartSpinning();
+        spotted = true;     
     }
 
 }
