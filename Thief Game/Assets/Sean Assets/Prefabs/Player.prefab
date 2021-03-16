@@ -306,6 +306,7 @@ MonoBehaviour:
   bobVerticalAmplitude: 0.1
   headBobSmoothing: 0.1
   isWalking: 0
+  PPS: {fileID: 0}
 --- !u!114 &2429893408259004221
 MonoBehaviour:
   m_ObjectHideFlags: 0
