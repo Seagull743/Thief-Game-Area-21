@@ -16,6 +16,8 @@ public class LaserTurnOff : InteractiveObject
     public void TurnOffLaser()
     {
         Spherecollider.GetComponent<Collider>().enabled = false;
+        laser.SetActive(false);
+        
     }
 
 

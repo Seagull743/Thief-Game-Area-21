@@ -18,7 +18,7 @@ public class GM : MonoBehaviour
     [SerializeField] private InteractiveObject currentObj;
 
     [SerializeField] private GameObject doorLockedText;
-
+    [SerializeField] PlayerTargets playerTargets;
 
 
 
@@ -95,5 +95,13 @@ public class GM : MonoBehaviour
         doorLockedText.SetActive(false);
     }
 
+    public PlayerTargets GetPlayerTargets()
+    {
+        if(playerTargets == null)
+        {
+            throw new System.Exception("Hey dingus set the playertargets on the GM");
+        }
+        return playerTargets;
+    }
 
 }
