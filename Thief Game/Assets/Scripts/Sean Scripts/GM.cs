@@ -26,7 +26,8 @@ public class GM : MonoBehaviour
     [SerializeField] public Text scoreText;
     [SerializeField] public static int theScore;
   
-  
+    [SerializeField] private GameObject kryptoArtTick;
+
   
     void Awake()
     {
@@ -103,5 +104,15 @@ public class GM : MonoBehaviour
         }
         return playerTargets;
     }
+
+
+    //Artifacts Tick complete
+
+    public void kryptoTick()
+    {
+        kryptoArtTick.SetActive(true);
+    }
+
+
 
 }

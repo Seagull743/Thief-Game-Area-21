@@ -5,6 +5,7 @@ using UnityEngine;
 public class KeyPad : InteractiveObject
 {
     public OfficeDoor OD;
+    public GameObject greenlight;
     public override void PlayerInteraction()
     {
         base.PlayerInteraction();
@@ -16,6 +17,7 @@ public class KeyPad : InteractiveObject
     {   
         OD.GetComponent<OfficeDoor>().OpenDoor();
         gameObject.GetComponent<Collider>().enabled = false;
+        greenlight.SetActive(true);
     }
 
 

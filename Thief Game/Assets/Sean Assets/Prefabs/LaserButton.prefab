@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3443194229689117432}
   m_Layer: 0
-  m_Name: LaserEmpty
+  m_Name: LaserButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,6 +31,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1299054714148830565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469531957979433477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b5a00e10f1417649848e6d0b418ef68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 4206859226502988346}
 --- !u!1001 &74463515555553752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,6 +115,10 @@ PrefabInstance:
       propertyPath: anim2
       value: 
       objectReference: {fileID: 4206859226502988346}
+    - target: {fileID: 4910378876055114741, guid: acc3b4650ab91af41adcae7bf4ae9e51, type: 3}
+      propertyPath: GB
+      value: 
+      objectReference: {fileID: 1299054714148830565}
     m_RemovedComponents:
     - {fileID: 1002805572212199655, guid: acc3b4650ab91af41adcae7bf4ae9e51, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: acc3b4650ab91af41adcae7bf4ae9e51, type: 3}
@@ -113,6 +130,11 @@ Transform:
 --- !u!95 &5943112102561286827 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6013045286565833587, guid: acc3b4650ab91af41adcae7bf4ae9e51, type: 3}
+  m_PrefabInstance: {fileID: 74463515555553752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8469531957979433477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8395094935938051037, guid: acc3b4650ab91af41adcae7bf4ae9e51, type: 3}
   m_PrefabInstance: {fileID: 74463515555553752}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &4206859226502988346 stripped

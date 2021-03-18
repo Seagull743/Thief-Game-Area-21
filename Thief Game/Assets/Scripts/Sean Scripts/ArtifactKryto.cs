@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectArtifact : InteractiveObject
+public class ArtifactKryto : InteractiveObject
 {
+  
+  public GM gm;
     public override void PlayerInteraction()
     {
         base.PlayerInteraction();
@@ -11,11 +13,10 @@ public class CollectArtifact : InteractiveObject
 
     }
 
-
-
     public void AddScore()
     {
       GM.theScore  += 1;
+      gm.GetComponent<GM>().kryptoTick();
       Destroy(gameObject);
     }
 

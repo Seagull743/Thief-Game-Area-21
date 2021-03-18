@@ -15,7 +15,7 @@ public class KeyCard : InteractiveObject
     private void GotKeyCard()
     {
         Debug.Log("GotKey");
-        Destroy(lockedCollider);
+        lockedCollider.GetComponent<Collider>().enabled = false;
         gameObject.GetComponent<Collider>().enabled = false;
         StartCoroutine(DesroyObject());
     }
