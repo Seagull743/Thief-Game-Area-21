@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 8878827264328958811}
   - component: {fileID: 56904287816052109}
   - component: {fileID: 8627461699221807669}
+  - component: {fileID: 8809980502019742666}
+  - component: {fileID: 2436245146916871170}
   m_Layer: 0
   m_Name: kryptonite
   m_TagString: Untagged
@@ -58,7 +60,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7392907515105311443}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.20564236, y: 8.094448, z: -0.17149524}
+  m_LocalPosition: {x: -0.2056424, y: 8.094448, z: -0.1714952}
   m_LocalScale: {x: 0.66599476, y: 0.66599476, z: 0.66599476}
   m_Children: []
   m_Father: {fileID: 6624976835236021746}
@@ -113,6 +115,38 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8809980502019742666
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7392907515105311443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9974756, y: 4.649259, z: 3.6622295}
+  m_Center: {x: 0.0297423, y: 0.064991236, z: 0.06413919}
+--- !u!95 &2436245146916871170
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7392907515105311443}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 24417e812496f3948b1694688b23a117, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8349868470865026180
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +158,7 @@ GameObject:
   - component: {fileID: 8558169231516683569}
   - component: {fileID: 1162707342735210044}
   - component: {fileID: 2726272867235130149}
+  - component: {fileID: 7948792924677463611}
   m_Layer: 0
   m_Name: Hover_Pad
   m_TagString: Untagged
@@ -139,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8349868470865026180}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0028810492, y: 5.5733256, z: 0}
+  m_LocalPosition: {x: -0.27, y: 5.5733256, z: -0.18}
   m_LocalScale: {x: 0.66599476, y: 0.48442292, z: 0.66599476}
   m_Children: []
   m_Father: {fileID: 6624976835236021746}
@@ -194,3 +229,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7948792924677463611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8349868470865026180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6752338, y: 1.1638639, z: 3.6752338}
+  m_Center: {x: 0.00000029802322, y: 0.0000030994415, z: -0.00000029802322}
