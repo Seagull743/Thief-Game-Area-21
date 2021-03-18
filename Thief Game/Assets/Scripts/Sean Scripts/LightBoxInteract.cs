@@ -5,8 +5,9 @@ using UnityEngine;
 public class LightBoxInteract : InteractiveObject
 {
    
-   public LightBox LB;
+    public LightBox LB;
     public Animator anim;
+    public GM gm;
 
 
     void Start()
@@ -17,10 +18,9 @@ public class LightBoxInteract : InteractiveObject
 
     public override void PlayerInteraction()
     {
-        
-        base.PlayerInteraction();
         anim.SetBool("turnoff", true);
         LB.GetComponent<LightBox>().TurnOffBox();
+        gm.GetComponent<GM>().Normalcross();    
     }
 
 }

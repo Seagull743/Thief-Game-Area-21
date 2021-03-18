@@ -33,7 +33,7 @@ public class CameraDetection : MonoBehaviour
            
        }
 
-        if(Timer >= 0.2)
+        if(Timer >= 0.5)
         {
             
             CheckPlayer();

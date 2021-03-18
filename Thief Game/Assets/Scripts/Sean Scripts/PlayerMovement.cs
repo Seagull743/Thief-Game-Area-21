@@ -51,6 +51,17 @@ public class PlayerMovement : MonoBehaviour
     public PostProcessingScript PPS;
 
 
+
+
+    //Head stop above
+    private bool isabove;
+    public Transform playerHead;
+    public float checkRadius = 0.5f;
+    public LayerMask aboveLayer;
+    public float standUpHeight = 0.5f;
+    private bool forcedCrouch;
+
+
     void Start()    {
         playerCol.GetComponent<CharacterController>();
         originalHeight = playerCol.height;
@@ -64,6 +75,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        isabove = Physics.CheckCapsule(playerHead.position, playerHead.position + new Vector3(0f, standUpHeight, 0f) , checkRadius, aboveLayer);
  
         if(isGrounded && velocity.y < 0)
         {
@@ -122,11 +135,31 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             Crouch();
+            forcedCrouch = false;
         }
-        else if (Input.GetKeyUp(KeyCode.LeftControl))
+        else if (Input.GetKeyUp(KeyCode.LeftControl) && isabove)
+        {
+            Crouch();
+            forcedCrouch = true;
+
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftControl) && !isabove)
         {
             unCrouch();
         }
+
+        if(forcedCrouch == true && !isabove)
+        {
+            unCrouch();         
+        }
+
+
+
+        //if(Input.GetKeyUp(KeyCode.LeftControl) && isabove) 
+       
+        
+        
+
 
        // Vector3 scale = transform.localScale;
         //scale.y = Mathf.Lerp(scale.y, lerpHeight, 0.2f * Time.deltaTime);

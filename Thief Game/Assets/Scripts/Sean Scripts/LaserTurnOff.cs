@@ -7,6 +7,19 @@ public class LaserTurnOff : InteractiveObject
 
     public GameObject laser;
     public GameObject Spherecollider;
+    public GM gm;
+    public Animator anim;
+    public GreenButton GB;
+   
+
+
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+       
+    }
+
 
     public override void PlayerInteraction()
     {
@@ -17,6 +30,10 @@ public class LaserTurnOff : InteractiveObject
     {
         Spherecollider.GetComponent<Collider>().enabled = false;
         laser.SetActive(false);
+        gm.GetComponent<GM>().Normalcross();
+        anim.SetBool("redpressed", true);
+        GB.GetComponent<GreenButton>().greenpressed();
+
         
     }
 
