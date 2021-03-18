@@ -5,11 +5,9 @@ using UnityEngine;
 public class KeyCard : InteractiveObject
 {
    
-    
+    public GameObject lockedCollider;
     public override void PlayerInteraction()
-    {
-        base.PlayerInteraction();
-       
+    {     
         GotKeyCard();
     }
 
@@ -17,7 +15,7 @@ public class KeyCard : InteractiveObject
     private void GotKeyCard()
     {
         Debug.Log("GotKey");
-        
+        Destroy(lockedCollider);
         gameObject.GetComponent<Collider>().enabled = false;
         StartCoroutine(DesroyObject());
     }

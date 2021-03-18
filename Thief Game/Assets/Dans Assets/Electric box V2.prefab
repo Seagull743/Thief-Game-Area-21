@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 532537045709163160}
   - component: {fileID: 1799266394219292860}
   - component: {fileID: 5294295372401099557}
+  - component: {fileID: 131486188}
+  - component: {fileID: 131486186}
+  - component: {fileID: 131486187}
   m_Layer: 0
   m_Name: electrical_Box
   m_TagString: Untagged
@@ -28,7 +31,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 5.792129, z: 13.053405}
   m_LocalScale: {x: 0.9165082, y: 3.118325, z: 2.117342}
-  m_Children: []
+  m_Children:
+  - {fileID: 5407134103886275541}
   m_Father: {fileID: 6334135424301974149}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -81,6 +85,45 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &131486188
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278807003634282653}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8954219, y: 1.17083, z: 1.1937464}
+  m_Center: {x: -0.9544454, y: 0.00000036616973, z: -0.04620886}
+--- !u!114 &131486186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278807003634282653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed033f304fae0349ae642e7fdce20dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 271741610}
+--- !u!114 &131486187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278807003634282653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6794f0735b9447548be5c9ace36a3945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LB: {fileID: 131486186}
 --- !u!1 &368538990869057223
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5407134103886275541}
+  - component: {fileID: 271741610}
   m_Layer: 0
   m_Name: HandlePivot
   m_TagString: Untagged
@@ -105,13 +149,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368538990869057223}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.17, y: 5.5300007, z: 11.83}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.18548787, y: -0.08406047, z: -0.5778013}
+  m_LocalScale: {x: 1.0910977, y: 0.32068497, z: 0.47229028}
   m_Children:
   - {fileID: 6878108563184286916}
-  m_Father: {fileID: 6334135424301974149}
-  m_RootOrder: 2
+  m_Father: {fileID: 532537045709163160}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &271741610
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368538990869057223}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adaf0cfa77d28d94681474e281ff7341, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5735905042969906824
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +346,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6334135424301974149}
-  - component: {fileID: 7746411472637210138}
   m_Layer: 0
   m_Name: Electric box V2
   m_TagString: Untagged
@@ -300,24 +362,10 @@ Transform:
   m_GameObject: {fileID: 6677868715667396671}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 20.78, y: 26.132309, z: 25.36}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.20880277, y: 0.20880277, z: 0.20880277}
   m_Children:
   - {fileID: 532537045709163160}
   - {fileID: 2548622660619320998}
-  - {fileID: 5407134103886275541}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!65 &7746411472637210138
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6677868715667396671}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.7330799, y: 3.6208534, z: 2.661724}
-  m_Center: {x: -0.7984247, y: 5.7261944, z: 12.946278}

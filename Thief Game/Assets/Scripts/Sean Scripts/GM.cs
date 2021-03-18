@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GM : MonoBehaviour
 {
 
     public static GM instance;
     public GameObject player;
-    
+
+    public Transform Playercam;
     
     [SerializeField]
     private GameObject interactcross;
@@ -15,10 +17,22 @@ public class GM : MonoBehaviour
     private GameObject normalcross;
     [SerializeField] private InteractiveObject currentObj;
 
+    [SerializeField] private GameObject doorLockedText;
+    [SerializeField] PlayerTargets playerTargets;
 
 
+
+// for score
+    [SerializeField] public Text scoreText;
+    [SerializeField] public static int theScore;
+  
+  
+  
     void Awake()
     {
+        
+        doorLockedText.SetActive(false);
+        
         if(instance == null)
         {
             instance = this;
@@ -31,6 +45,11 @@ public class GM : MonoBehaviour
         interactcross.SetActive(false);
         normalcross.SetActive(true);
     
+    }
+
+    void Update()
+    {
+        scoreText.text = "Collected: " + theScore;
     }
 
     public void Normalcross()
@@ -64,5 +83,25 @@ public class GM : MonoBehaviour
         return currentObj;
     }
 
+     public void LockedDoor()
+    {
+         StartCoroutine(LockedText());
+    }
+    
+    IEnumerator LockedText()
+    {
+        doorLockedText.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        doorLockedText.SetActive(false);
+    }
+
+    public PlayerTargets GetPlayerTargets()
+    {
+        if(playerTargets == null)
+        {
+            throw new System.Exception("Hey dingus set the playertargets on the GM");
+        }
+        return playerTargets;
+    }
 
 }

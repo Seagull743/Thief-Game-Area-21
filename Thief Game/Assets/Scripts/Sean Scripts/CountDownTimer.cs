@@ -11,7 +11,7 @@ public class CountDownTimer : MonoBehaviour
     [SerializeField]
     private Text CountDownText;
     private bool spotted = false;
-
+    public Alarm alarm;
     public PlayerGettingArrested PA;
 
     void Start()
@@ -41,7 +41,7 @@ public class CountDownTimer : MonoBehaviour
 
     public void Spotted()
     {
-        spotted = true;
+        spotted = true;     
     }
 
 }
