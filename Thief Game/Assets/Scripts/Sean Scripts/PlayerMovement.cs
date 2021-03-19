@@ -62,12 +62,15 @@ public class PlayerMovement : MonoBehaviour
     private bool forcedCrouch;
 
 
+
+
     void Start()    {
         playerCol.GetComponent<CharacterController>();
         originalHeight = playerCol.height;
         lerpHeight = originalHeight;
         isCrouching = false;
         isWalking = false;
+        
     }
 
 
@@ -118,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
  
         controller.Move(velocity * Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.LeftShift) && !isCrouching)
+        if(Input.GetKeyDown(KeyCode.LeftShift) && !isCrouching && isGrounded)
         {
             isSprinting = true;
             speed += SprintBoost;
@@ -136,21 +139,25 @@ public class PlayerMovement : MonoBehaviour
         {
             Crouch();
             forcedCrouch = false;
+           
         }
         else if (Input.GetKeyUp(KeyCode.LeftControl) && isabove)
         {
             Crouch();
             forcedCrouch = true;
+           
 
         }
         else if (Input.GetKeyUp(KeyCode.LeftControl) && !isabove)
         {
             unCrouch();
+           
         }
 
         if(forcedCrouch == true && !isabove)
         {
-            unCrouch();         
+            unCrouch();
+              
         }
 
 

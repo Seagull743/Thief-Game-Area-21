@@ -28,12 +28,13 @@ public class GM : MonoBehaviour
   
     [SerializeField] private GameObject kryptoArtTick;
 
-    
-
+     [SerializeField] private GameObject exitGate;
   
     void Awake()
     {
 
+        exitGate.SetActive(false);
+        
         kryptoArtTick.SetActive(false);
 
         doorLockedText.SetActive(false);
@@ -55,6 +56,22 @@ public class GM : MonoBehaviour
     void Update()
     {
         scoreText.text = "Collected: " + theScore;
+    
+    
+        if(theScore >= 1)
+        {
+            SpawnExitGate();
+        }
+        else if(Alarm.Spotted == true)
+        {
+            SpawnExitGate();
+        }
+        else
+        {
+            exitGate.SetActive(false);
+        }
+    
+    
     }
 
     public void Normalcross()
@@ -117,6 +134,9 @@ public class GM : MonoBehaviour
         kryptoArtTick.SetActive(true);
     }
 
-
+    public void SpawnExitGate()
+    {
+        exitGate.SetActive(true);
+    }
 
 }

@@ -8,7 +8,7 @@ public class Alarm : MonoBehaviour
     public float RotateSpeed;
     public GameObject light1;
     public GameObject light2;
-    public bool Spotted = false;
+    public static bool Spotted = false;
 
 
     //Cam Lights
