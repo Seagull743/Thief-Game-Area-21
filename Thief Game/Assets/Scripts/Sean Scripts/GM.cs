@@ -28,10 +28,14 @@ public class GM : MonoBehaviour
   
     [SerializeField] private GameObject kryptoArtTick;
 
+    
+
   
     void Awake()
     {
-        
+
+        kryptoArtTick.SetActive(false);
+
         doorLockedText.SetActive(false);
         
         if(instance == null)

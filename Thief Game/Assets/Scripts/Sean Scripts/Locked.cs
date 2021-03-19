@@ -7,6 +7,7 @@ public class Locked : InteractiveObject
     
     public GM gamemanager;
     public GameObject RedColor;
+    public GameObject OrangeColor;
     public override void PlayerInteraction()
     {
         base.PlayerInteraction();
@@ -18,8 +19,10 @@ public class Locked : InteractiveObject
     IEnumerator RedFlash()
     {
         RedColor.SetActive(true);
+        OrangeColor.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         RedColor.SetActive(false);
+        OrangeColor.SetActive(true);
     }
 
    

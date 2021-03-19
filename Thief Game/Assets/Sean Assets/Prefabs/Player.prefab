@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2025445841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2025445842}
+  m_Layer: 10
+  m_Name: Mid Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2025445842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025445841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.97, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2429893408259004216}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2429893407268904645
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +262,7 @@ GameObject:
   - component: {fileID: 2429893408259004219}
   - component: {fileID: 2429893408259004221}
   - component: {fileID: 2429893408259004218}
+  - component: {fileID: 683714693}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -253,6 +284,7 @@ Transform:
   - {fileID: 2429893408706671365}
   - {fileID: 2429893407678123277}
   - {fileID: 2429893407636739373}
+  - {fileID: 2025445842}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -307,6 +339,12 @@ MonoBehaviour:
   headBobSmoothing: 0.1
   isWalking: 0
   PPS: {fileID: 0}
+  playerHead: {fileID: 2429893407268904644}
+  checkRadius: 0.5
+  aboveLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  standUpHeight: 0.5
 --- !u!114 &2429893408259004221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +376,23 @@ MonoBehaviour:
   gm: {fileID: 0}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
+--- !u!114 &683714693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429893408259004358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd2386a4a2646d4f8ccc1a7a9105660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTargetPoints:
+  - {fileID: 2429893408259004216}
+  - {fileID: 2429893407268904644}
+  - {fileID: 2025445842}
 --- !u!1 &2429893408706671362
 GameObject:
   m_ObjectHideFlags: 0

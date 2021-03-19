@@ -1,5 +1,41 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5382620465052643858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076543156577871084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d75c104699eb64998f6d3451d29ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alarm: {fileID: 0}
+  CamRaycastPoint: {fileID: 0}
+  targets: {fileID: 0}
+  ConeVision:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &5382620465363142691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076543156806057758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d75c104699eb64998f6d3451d29ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alarm: {fileID: 0}
+  CamRaycastPoint: {fileID: 0}
+  targets: {fileID: 0}
+  ConeVision:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &5382620464567601531
 GameObject:
   m_ObjectHideFlags: 0
@@ -27,7 +63,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5382620464567601531}
-  m_LocalRotation: {x: -0, y: -0.40416187, z: -0, w: 0.9146876}
+  m_LocalRotation: {x: 0, y: -0.40416017, z: 0, w: 0.9146882}
   m_LocalPosition: {x: 10.93, y: 13.51, z: -0.22}
   m_LocalScale: {x: 0.79242337, y: 0.79242337, z: 0.79242337}
   m_Children:
@@ -116,32 +152,7 @@ MonoBehaviour:
   Spotted: 0
   camlight1: {fileID: 0}
   camelight2: {fileID: 0}
---- !u!114 &5382620465052643858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5076543156577871084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0d75c104699eb64998f6d3451d29ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CT: {fileID: 0}
---- !u!114 &5382620465363142691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5076543156806057758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0d75c104699eb64998f6d3451d29ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CT: {fileID: 0}
+  CDT: {fileID: 0}
 --- !u!1001 &5382620463323339608
 PrefabInstance:
   m_ObjectHideFlags: 0

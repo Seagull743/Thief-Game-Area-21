@@ -1,5 +1,86 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &210890560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 210890561}
+  - component: {fileID: 210890563}
+  - component: {fileID: 210890562}
+  m_Layer: 0
+  m_Name: Orange (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &210890561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210890560}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 2.0213797, y: 9.40983, z: 0.8868564}
+  m_LocalScale: {x: 3.2279658, y: 3.2279658, z: 3.2279658}
+  m_Children: []
+  m_Father: {fileID: 726609805361230194}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &210890563
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210890560}
+  m_Mesh: {fileID: 8211372540250625004, guid: fd5adc80081f66548b8250685f8a9cf7, type: 3}
+--- !u!23 &210890562
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210890560}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 72398ed948b83da4ab7bbc055f0a8b8b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &98726696058842059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OD: {fileID: 0}
   greenlight: {fileID: 6099414780219624849}
+  orangecolor: {fileID: 4461171450057109499}
 --- !u!1 &188393774819194458
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gamemanager: {fileID: 0}
   RedColor: {fileID: 2287817965412669215}
+  OrangeColor: {fileID: 4461171450057109499}
 --- !u!1001 &1615797357346539252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,6 +264,11 @@ Transform:
 --- !u!1 &6099414780219624849 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4812393411592440677, guid: 63eb7ac58468e66469ca7c178d2e5ade, type: 3}
+  m_PrefabInstance: {fileID: 1615797357346539252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4461171450057109499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3135970914813045007, guid: 63eb7ac58468e66469ca7c178d2e5ade, type: 3}
   m_PrefabInstance: {fileID: 1615797357346539252}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2287817965412669215 stripped
