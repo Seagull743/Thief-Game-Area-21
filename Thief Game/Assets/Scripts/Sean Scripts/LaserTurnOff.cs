@@ -16,7 +16,7 @@ public class LaserTurnOff : InteractiveObject
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
        
     }
 
@@ -33,6 +33,7 @@ public class LaserTurnOff : InteractiveObject
         gm.GetComponent<GM>().Normalcross();
         anim.SetBool("redpressed", true);
         GB.GetComponent<GreenButton>().greenpressed();
+        gameObject.GetComponent<Collider>().enabled = false;
 
         
     }

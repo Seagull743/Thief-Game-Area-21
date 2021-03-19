@@ -6,6 +6,7 @@ public class KeyCard : InteractiveObject
 {
    
     public GameObject lockedCollider;
+    public GM gm;
     public override void PlayerInteraction()
     {     
         GotKeyCard();
@@ -17,15 +18,11 @@ public class KeyCard : InteractiveObject
         Debug.Log("GotKey");
         lockedCollider.GetComponent<Collider>().enabled = false;
         gameObject.GetComponent<Collider>().enabled = false;
-        StartCoroutine(DesroyObject());
-    }
-
-    IEnumerator DesroyObject()
-    {
-        yield return new WaitForFixedUpdate();
+        gm.GetComponent<GM>().Normalcross();
         Destroy(this.gameObject);
-
     }
+
+   
 
 
 }
