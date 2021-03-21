@@ -11495,6 +11495,54 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera A
       objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6598568
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.03815465
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.064175926
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.74767286
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -79.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 48.306
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -50.424
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.097713
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407849312036678615, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7742954
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 380887208f14a7e46bed670f454ecf26, type: 3}
 --- !u!1 &8520758682150850285 stripped

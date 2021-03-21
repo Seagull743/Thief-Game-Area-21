@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class CameraDetection : MonoBehaviour
 {   
-    private float Timer;
+   // private float Timer;
     private bool timerStarter;
     public Alarm alarm;
 
@@ -23,29 +23,30 @@ public class CameraDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-       if(timerStarter == true)
-       {
-            Timer += Time.deltaTime;     
-       }
-       else if(timerStarter == false)
-       {
-           Timer = 0;
+     //  if(timerStarter == true)
+     //  {
+      //      Timer += Time.deltaTime;     
+      // }
+      // else if(timerStarter == false)
+      // {
+      //     Timer = 0;
            
-       }
+     //  }
 
-        if(Timer >= 0.2)
-        {
+        //if(Timer >= 0.1)
+       // {
             
-            CheckPlayer();
-        }
-    }
+            //CheckPlayer();
+      //  }
+   }
 
 
     private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            timerStarter = true;           
+            //timerStarter = true;
+            CheckPlayer();
         }
     }
     
