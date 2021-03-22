@@ -60,6 +60,12 @@ public class CameraDetection : MonoBehaviour
         }
     }
 
+    public void PlayAlarmSound()
+    {
+        FindObjectOfType<AudioManager>().Play("Alarm");
+    }
+
+
     public void CheckPlayer()
     {
         //Debug.LogError("It's running");
@@ -78,7 +84,10 @@ public class CameraDetection : MonoBehaviour
 
                 if (hitObject.CompareTag("Player"))
                 {
+                    
                     alarm.GetComponent<Alarm>().StartSpinning();
+                    Invoke("PlayAlarmSound", 1.2f);
+                    
                 }
             }
             else

@@ -63,6 +63,16 @@ public class PlayerMovement : MonoBehaviour
 
 
 
+    //Player FoorSteps
+
+   
+
+
+    void Awake()
+    {
+           
+    }
+
 
     void Start()    {
         playerCol.GetComponent<CharacterController>();
@@ -70,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         lerpHeight = originalHeight;
         isCrouching = false;
         isWalking = false;
-        
+       
     }
 
 

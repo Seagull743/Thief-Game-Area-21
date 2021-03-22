@@ -19,7 +19,9 @@ public class KeyPad : InteractiveObject
         OD.GetComponent<OfficeDoor>().OpenDoor();
         gameObject.GetComponent<Collider>().enabled = false;
         orangecolor.SetActive(false);
+        FindObjectOfType<AudioManager>().Play("KeyPad");
         greenlight.SetActive(true);
+
         
     }
 

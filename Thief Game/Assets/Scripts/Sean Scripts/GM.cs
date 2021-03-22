@@ -139,4 +139,6 @@ public class GM : MonoBehaviour
         exitGate.SetActive(true);
     }
 
+    
+
 }
