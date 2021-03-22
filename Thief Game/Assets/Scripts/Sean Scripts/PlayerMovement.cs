@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     //Head stop above
-    private bool isabove;
+    public bool isabove;
     public Transform playerHead;
     public float checkRadius = 0.5f;
     public LayerMask aboveLayer;
@@ -104,8 +104,6 @@ public class PlayerMovement : MonoBehaviour
             isWalking = false;
         }
         
-        
-
 
         if (Input.GetButtonDown("Jump") && isGrounded && !isCrouching)
         {
@@ -135,37 +133,22 @@ public class PlayerMovement : MonoBehaviour
             bobFrequency = 3f;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             Crouch();
-            forcedCrouch = false;
-           
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftControl) && isabove)
-        {
-            Crouch();
-            forcedCrouch = true;
-           
-
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftControl) && !isabove)
-        {
-            unCrouch();
-           
-        }
-
-        if(forcedCrouch == true && !isabove)
-        {
-            unCrouch();
-              
-        }
-
-
-
-        //if(Input.GetKeyUp(KeyCode.LeftControl) && isabove) 
        
-        
-        
+           
+        }
+       
+         
+        else if (!Input.GetKey(KeyCode.LeftControl) && !isabove && isCrouching)
+        {
+            unCrouch();
+        }
+
+ 
+       
+           
 
 
        // Vector3 scale = transform.localScale;

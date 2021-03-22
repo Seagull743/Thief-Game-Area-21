@@ -32,7 +32,10 @@ public class PlayerRaycast : MonoBehaviour
             {
                 gm.InteractCross();
             }
-          
+            else
+            {
+                gm.Normalcross();
+            }
         }
         else
         {
