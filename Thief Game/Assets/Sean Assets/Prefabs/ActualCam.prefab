@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 57384380799802619, guid: 7bb598a94deb3ad4b915912b1119f2b8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2204063425655070948, guid: 7bb598a94deb3ad4b915912b1119f2b8, type: 3}
       propertyPath: m_Name
       value: Turn point Camera
@@ -399,6 +403,14 @@ PrefabInstance:
     - target: {fileID: 4794123671541429195, guid: 7bb598a94deb3ad4b915912b1119f2b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794123671541429195, guid: 7bb598a94deb3ad4b915912b1119f2b8, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813165556268867588, guid: 7bb598a94deb3ad4b915912b1119f2b8, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bb598a94deb3ad4b915912b1119f2b8, type: 3}
