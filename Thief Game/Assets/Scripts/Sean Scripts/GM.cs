@@ -28,6 +28,8 @@ public class GM : MonoBehaviour
   
     [SerializeField] private GameObject kryptoArtTick;
 
+    [SerializeField] private GameObject SymbolArtTick;
+
      [SerializeField] private GameObject exitGate;
   
     void Awake()
@@ -36,7 +38,7 @@ public class GM : MonoBehaviour
         exitGate.SetActive(false);
         
         kryptoArtTick.SetActive(false);
-
+        SymbolArtTick.SetActive(false);
         doorLockedText.SetActive(false);
         
         if(instance == null)
@@ -132,6 +134,11 @@ public class GM : MonoBehaviour
     public void kryptoTick()
     {
         kryptoArtTick.SetActive(true);
+    }
+
+     public void SymbolTick()
+    {
+        SymbolArtTick.SetActive(true);
     }
 
     public void SpawnExitGate()

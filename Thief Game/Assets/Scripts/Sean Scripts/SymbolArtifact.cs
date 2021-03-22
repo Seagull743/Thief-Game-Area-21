@@ -15,7 +15,8 @@ public class SymbolArtifact: InteractiveObject
 
     public void AddScore()
     {
-      GM.theScore  += 1;   
+      GM.theScore  += 1;
+      gm.GetComponent<GM>().SymbolTick();   
       Destroy(gameObject);
     }
 

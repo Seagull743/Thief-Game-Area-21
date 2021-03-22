@@ -5,18 +5,20 @@ using UnityEngine;
 public class OfficeDoor : InteractiveObject
 {
     public Animator anim;
+    public Animator anim2;
     public bool doorLocked = true;
 
     public override void PlayerInteraction()
     {
-        base.PlayerInteraction();
+        
         OpenDoor();
-
     }
 
         void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
+        anim2 = GetComponentInChildren<Animator>();
+        
     }
 
 
@@ -25,7 +27,8 @@ public class OfficeDoor : InteractiveObject
     public void OpenDoor()
     {
         doorLocked = false;
-        anim.SetBool("opened", true);
+        anim.SetBool("open", true);
+        anim2.SetBool("open", true);
     }
 
 }
