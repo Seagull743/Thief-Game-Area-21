@@ -7,6 +7,8 @@ public class KeyPad : InteractiveObject
     public OfficeDoor OD;
     public GameObject greenlight;
     public GameObject orangecolor;
+    public GameObject Collider;
+
     public override void PlayerInteraction()
     {
         base.PlayerInteraction();
@@ -21,8 +23,7 @@ public class KeyPad : InteractiveObject
         orangecolor.SetActive(false);
         FindObjectOfType<AudioManager>().Play("KeyPad");
         greenlight.SetActive(true);
-
-        
+        Collider.GetComponent<BoxCollider>().enabled = false;     
     }
 
 

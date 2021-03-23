@@ -5,7 +5,7 @@ using UnityEngine;
 public class LaserTurnOff : InteractiveObject
 {
 
-    public GameObject laser;
+    public GameObject[] lasers;
     public GameObject Spherecollider;
     public GM gm;
     public Animator anim;
@@ -29,7 +29,10 @@ public class LaserTurnOff : InteractiveObject
     public void TurnOffLaser()
     {
         Spherecollider.GetComponent<Collider>().enabled = false;
-        laser.SetActive(false);
+        foreach (GameObject g in lasers) {
+            g.SetActive(false);
+        }
+        //laser.SetActive(false);
         gm.GetComponent<GM>().Normalcross();
         anim.SetBool("redpressed", true);
         GB.GetComponent<GreenButton>().greenpressed();
