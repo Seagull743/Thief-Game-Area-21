@@ -38,6 +38,7 @@ public class Alarm : MonoBehaviour
         light1.SetActive(true);
         light2.SetActive(true);
         CDT.GetComponent<CountDownTimer>().Spotted();
+        FindObjectOfType<AudioManager>().Play("Alarm");
     }
 
 

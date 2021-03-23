@@ -62,7 +62,7 @@ public class CameraDetection : MonoBehaviour
 
     public void PlayAlarmSound()
     {
-        FindObjectOfType<AudioManager>().Play("Alarm");
+        
     }
 
 
@@ -86,8 +86,7 @@ public class CameraDetection : MonoBehaviour
                 {
                     
                     alarm.GetComponent<Alarm>().StartSpinning();
-                    Invoke("PlayAlarmSound", 1.2f);
-                    
+                 
                 }
             }
             else
