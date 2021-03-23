@@ -2,23 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OfficeDoor : InteractiveObject
+public class OfficeDoor : MonoBehaviour
 {
-    public Animator anim;
-    public Animator anim2;
+    public Animator[] anim;
     public bool doorLocked = true;
 
-    public override void PlayerInteraction()
-    {
-        
-        OpenDoor();
-    }
 
-        void Start()
+    void Start()
     {
-        anim = GetComponentInChildren<Animator>();
-        anim2 = GetComponentInChildren<Animator>();
-        
+        anim = GetComponentsInChildren<Animator>();     
     }
 
 
@@ -27,8 +19,14 @@ public class OfficeDoor : InteractiveObject
     public void OpenDoor()
     {
         doorLocked = false;
-        anim.SetBool("open", true);
-        anim2.SetBool("open", true);
+        for (int i = 0; i < anim.Length; i++)
+        {
+            anim[i].SetBool("open", true);
+        }
+
+            
+        
+        
     }
 
 }

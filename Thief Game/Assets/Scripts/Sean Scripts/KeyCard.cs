@@ -18,6 +18,7 @@ public class KeyCard : InteractiveObject
         Debug.Log("GotKey");
         lockedCollider.GetComponent<Collider>().enabled = false;
         gameObject.GetComponent<Collider>().enabled = false;
+        FindObjectOfType<AudioManager>().Play("KeyCard");
         gm.GetComponent<GM>().Normalcross();
         Destroy(this.gameObject);
     }
