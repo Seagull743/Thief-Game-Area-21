@@ -17,6 +17,8 @@ public class GM : MonoBehaviour
     private GameObject normalcross;
     [SerializeField] private InteractiveObject currentObj;
 
+
+    [SerializeField] private GameObject escapetext;
     [SerializeField] private GameObject doorLockedText;
     [SerializeField] PlayerTargets playerTargets;
 
@@ -30,16 +32,24 @@ public class GM : MonoBehaviour
 
     [SerializeField] private GameObject SymbolArtTick;
 
+    [SerializeField] private GameObject saberTick;
+
      [SerializeField] private GameObject exitGate;
+
+     [SerializeField] private ParticleSystem GateEffect;
   
     void Awake()
     {
+
+        theScore = 0;
 
         exitGate.SetActive(false);
         
         kryptoArtTick.SetActive(false);
         SymbolArtTick.SetActive(false);
+        saberTick.SetActive(false);
         doorLockedText.SetActive(false);
+        escapetext.SetActive(false);
         
         if(instance == null)
         {
@@ -58,19 +68,26 @@ public class GM : MonoBehaviour
     void Update()
     {
         scoreText.text = "Collected: " + theScore;
+
+
+        
     
     
         if(theScore >= 1)
         {
             SpawnExitGate();
+            GateEffect.Play();
         }
         else if(Alarm.Spotted == true)
         {
             SpawnExitGate();
+            escapetext.SetActive(true);
+            GateEffect.Play();
         }
         else
         {
             exitGate.SetActive(false);
+            GateEffect.Stop();
         }
     
     
@@ -139,6 +156,11 @@ public class GM : MonoBehaviour
      public void SymbolTick()
     {
         SymbolArtTick.SetActive(true);
+    }
+
+     public void SaberTick()
+    {
+        saberTick.SetActive(true);
     }
 
     public void SpawnExitGate()
