@@ -18,7 +18,6 @@ public class GM : MonoBehaviour
     [SerializeField] private InteractiveObject currentObj;
 
 
-    [SerializeField] private GameObject escapetext;
     [SerializeField] private GameObject doorLockedText;
     [SerializeField] PlayerTargets playerTargets;
 
@@ -44,12 +43,11 @@ public class GM : MonoBehaviour
         theScore = 0;
 
         exitGate.SetActive(false);
-        
         kryptoArtTick.SetActive(false);
         SymbolArtTick.SetActive(false);
         saberTick.SetActive(false);
         doorLockedText.SetActive(false);
-        escapetext.SetActive(false);
+        
         
         if(instance == null)
         {
@@ -81,7 +79,6 @@ public class GM : MonoBehaviour
         else if(Alarm.Spotted == true)
         {
             SpawnExitGate();
-            escapetext.SetActive(true);
             GateEffect.Play();
         }
         else

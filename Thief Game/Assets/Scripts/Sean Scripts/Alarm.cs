@@ -17,11 +17,13 @@ public class Alarm : MonoBehaviour
    
 
     public CountDownTimer CDT;
+    public GameObject escapetext;
 
      void Start()
     {
         light1.SetActive(false);
         light2.SetActive(false);
+        escapetext.SetActive(false);
        
     }
 
@@ -41,7 +43,8 @@ public class Alarm : MonoBehaviour
         light2.SetActive(true);
         CDT.GetComponent<CountDownTimer>().Spotted();
         FindObjectOfType<AudioManager>().Play("Alarm");
-        
+        escapetext.SetActive(true);
+
     }
 
 
