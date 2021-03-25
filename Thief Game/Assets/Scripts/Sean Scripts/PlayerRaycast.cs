@@ -7,7 +7,7 @@ public class PlayerRaycast : MonoBehaviour
 
     public Transform playerCam;
 
-    public static float maxDistance = 3f;
+    public static float maxDistance = 2f;
     public GM gm;
     public LayerMask playerLayer;
 
