@@ -14,6 +14,7 @@ public class Alarm : MonoBehaviour
     //Cam Lights
     public GameObject camlight1;
     public GameObject camelight2;
+   
 
     public CountDownTimer CDT;
 
@@ -21,6 +22,7 @@ public class Alarm : MonoBehaviour
     {
         light1.SetActive(false);
         light2.SetActive(false);
+       
     }
 
     void Update()
@@ -39,6 +41,7 @@ public class Alarm : MonoBehaviour
         light2.SetActive(true);
         CDT.GetComponent<CountDownTimer>().Spotted();
         FindObjectOfType<AudioManager>().Play("Alarm");
+        
     }
 
 

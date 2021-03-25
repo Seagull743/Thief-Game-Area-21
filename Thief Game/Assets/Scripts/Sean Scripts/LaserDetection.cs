@@ -6,11 +6,10 @@ public class LaserDetection : MonoBehaviour
 {
 
     public Alarm alarm;
-    public AudioSource laser;
 
     void Start()
     {
-        laser.Play();
+        
     }
 
 

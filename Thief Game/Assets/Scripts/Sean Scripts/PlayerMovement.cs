@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
-    public float SprintBoost = 5f;
+    public float SprintBoost = 2.5f;
  
     Vector3 velocity;
     private bool isGrounded;
