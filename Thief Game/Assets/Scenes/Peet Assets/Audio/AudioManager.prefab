@@ -40,13 +40,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1720165059379144270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1fbf4e1ec625a4ebf97b388c0f5798, type: 3}
+  m_Script: {fileID: 11500000, guid: eafbc8a403bd51d41b7666cfc453da74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Normal Alarm
-    clip: {fileID: 8300000, guid: 5a47c1e66a351e34a8520e64b149ffb1, type: 3}
-    volume: 0.3
+  - name: Alarm
+    clip: {fileID: 8300000, guid: 93b32fd08446742459e7fdf99554e362, type: 3}
+    volume: 0
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: KeyPad
+    clip: {fileID: 8300000, guid: 6a7fbcee5e2e41648a8fb33815528c8f, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KeyCard
+    clip: {fileID: 8300000, guid: 7d7dae904d15e8c4cb2c3bc3f9a648f5, type: 3}
+    volume: 0.316
+    pitch: 1
+    loop: 0
     source: {fileID: 0}

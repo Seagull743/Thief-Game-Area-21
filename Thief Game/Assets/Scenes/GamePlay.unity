@@ -16503,64 +16503,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[1].name
-      value: KeyPad
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 6a7fbcee5e2e41648a8fb33815528c8f, type: 3}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[1].volume
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[1].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[1].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[2].name
-      value: KeyCard
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[2].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 7d7dae904d15e8c4cb2c3bc3f9a648f5, type: 3}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[2].volume
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[2].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[2].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[0].name
-      value: Alarm
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[0].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 93b32fd08446742459e7fdf99554e362, type: 3}
-    - target: {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
-      propertyPath: sounds.Array.data[0].loop
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1720165059379144271, guid: 48459fa581113b2409326baed096f495, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48459fa581113b2409326baed096f495, type: 3}
 --- !u!1001 &1088216766
 PrefabInstance:
@@ -36445,23 +36388,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 028d5d22a3af0d64e8ff636b8794e3e2, type: 3}
---- !u!1 &2085959830 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1720165059379144270, guid: 48459fa581113b2409326baed096f495, type: 3}
-  m_PrefabInstance: {fileID: 1087811876}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2085959833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085959830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2090643082
 PrefabInstance:
   m_ObjectHideFlags: 0
