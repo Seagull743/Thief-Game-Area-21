@@ -2325,8 +2325,8 @@ MonoBehaviour:
     are going to be many obstacles throughout the layout design which will try and
     delay or possibly prevent you from escaping with the artifacts, ending up with
     the player getting arrested. There will be cameras and lasers through out the
-    map. You will have to find a way to avoid those obstacles and correct 3 artifacts
-    with out being caught
+    map. You will have to find a way to avoid these obstacles and collect 3 artifacts
+    without being caught.
 --- !u!222 &1239824661
 CanvasRenderer:
   m_ObjectHideFlags: 0

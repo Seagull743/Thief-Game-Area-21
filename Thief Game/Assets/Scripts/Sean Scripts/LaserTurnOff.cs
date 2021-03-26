@@ -10,7 +10,7 @@ public class LaserTurnOff : InteractiveObject
     public GM gm;
     public Animator anim;
     public GreenButton GB;
-   
+    public GameObject audiosource;
 
 
 
@@ -33,7 +33,7 @@ public class LaserTurnOff : InteractiveObject
         foreach (GameObject g in lasers) {
             g.SetActive(false);
         }
-        //laser.SetActive(false);
+        audiosource.SetActive(false);
         gm.GetComponent<GM>().Normalcross();
         anim.SetBool("redpressed", true);
         GB.GetComponent<GreenButton>().greenpressed();
