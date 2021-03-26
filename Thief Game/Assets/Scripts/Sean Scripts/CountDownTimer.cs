@@ -14,7 +14,7 @@ public class CountDownTimer : MonoBehaviour
     public Alarm alarm;
     public PlayerGettingArrested PA;
 
-    private AudioManager am;
+    private AudioM am;
 
     public bool isplayed = false;
 
@@ -22,7 +22,7 @@ public class CountDownTimer : MonoBehaviour
     {
         CountDownText.enabled = false;
         currentTime = startingTime;
-        am = FindObjectOfType<AudioManager>();
+        am = FindObjectOfType<AudioM>();
     }
 
     void Update()

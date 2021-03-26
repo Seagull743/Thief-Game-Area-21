@@ -19,7 +19,7 @@ public class LightBoxInteract : InteractiveObject
     public override void PlayerInteraction()
     {
         anim.SetBool("turnoff", true);
-        FindObjectOfType<AudioManager>().Play("LightSwitch");
+        FindObjectOfType<AudioM>().Play("LightSwitch");
         LB.GetComponent<LightBox>().TurnOffBox();
         gm.GetComponent<GM>().Normalcross();    
     }
