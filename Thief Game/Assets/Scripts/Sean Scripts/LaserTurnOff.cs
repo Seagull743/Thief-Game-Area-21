@@ -28,6 +28,7 @@ public class LaserTurnOff : InteractiveObject
 
     public void TurnOffLaser()
     {
+        FindObjectOfType<AudioManager>().Play("laserbutton");
         Spherecollider.GetComponent<Collider>().enabled = false;
         foreach (GameObject g in lasers) {
             g.SetActive(false);

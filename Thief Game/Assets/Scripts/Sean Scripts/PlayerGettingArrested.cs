@@ -19,6 +19,7 @@ public class PlayerGettingArrested : MonoBehaviour
         anim.SetBool("isArrested", true);
         Cl.GetComponent<Cameralook>().enabled = false;
         PM.GetComponent<PlayerMovement>().enabled = false;
+      //  FindObjectOfType<AudioManager>().Play("a");
         Invoke("LoadSceneTime", 3f);
     }
 

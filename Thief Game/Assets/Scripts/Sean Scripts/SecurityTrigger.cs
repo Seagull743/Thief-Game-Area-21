@@ -14,6 +14,7 @@ public class SecurityTrigger : MonoBehaviour
            if(SecurityDoor.DoorOpen == false)
             {
                 SD.OpenDoor();
+               
             }
            else if(SecurityDoor.DoorOpen == true)
             {

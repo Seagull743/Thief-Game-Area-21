@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: Alarm
     clip: {fileID: 8300000, guid: 93b32fd08446742459e7fdf99554e362, type: 3}
-    volume: 0
+    volume: 0.353
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -58,7 +58,31 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: KeyCard
     clip: {fileID: 8300000, guid: 7d7dae904d15e8c4cb2c3bc3f9a648f5, type: 3}
-    volume: 0.316
+    volume: 0.247
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LightSwitch
+    clip: {fileID: 8300000, guid: 9787f8d66ac18f84a99d14de5f23de4f, type: 3}
+    volume: 0.201
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: a
+    clip: {fileID: 8300000, guid: 1df99c9bbeda345488b8da4cfd2fe8b5, type: 3}
+    volume: 0.28
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: laserbutton
+    clip: {fileID: 8300000, guid: 020030f9f6819b646972ba838f00029e, type: 3}
+    volume: 0.28
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: laserbutton
+    clip: {fileID: 8300000, guid: 020030f9f6819b646972ba838f00029e, type: 3}
+    volume: 0.28
     pitch: 1
     loop: 0
     source: {fileID: 0}

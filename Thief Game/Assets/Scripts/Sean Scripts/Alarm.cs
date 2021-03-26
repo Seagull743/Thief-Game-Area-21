@@ -8,12 +8,12 @@ public class Alarm : MonoBehaviour
     public float RotateSpeed;
     public GameObject light1;
     public GameObject light2;
+    public GameObject[] LightBeam;
     public static bool Spotted = false;
 
 
     //Cam Lights
-    public GameObject camlight1;
-    public GameObject camelight2;
+    
    
 
     public CountDownTimer CDT;
@@ -49,9 +49,13 @@ public class Alarm : MonoBehaviour
 
 
     public void StartSpinning()
-    {    
-        camlight1.SetActive(false);
-        camelight2.SetActive(false);
+    {
+        // add for each loop
+        foreach (GameObject g in LightBeam)
+        {
+            g.SetActive(false);
+        }
+
         Invoke("spinning", 2.0f);
 
         

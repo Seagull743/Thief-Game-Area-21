@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using GameAnalyticsSDK;
 
 
 
@@ -14,6 +14,8 @@ public class CameraDetection : MonoBehaviour
     public Transform CamRaycastPoint;
     public PlayerTargets targets;
     public LayerMask ConeVision;
+
+    public string cameraname = "unamedcamera";
     
     void Start()
     {
@@ -86,7 +88,7 @@ public class CameraDetection : MonoBehaviour
                 {
                     
                     alarm.GetComponent<Alarm>().StartSpinning();
-                 
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, cameraname);
                 }
             }
             else

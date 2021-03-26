@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GameAnalyticsSDK;
 
 public class GM : MonoBehaviour
 {
@@ -22,8 +23,11 @@ public class GM : MonoBehaviour
     [SerializeField] PlayerTargets playerTargets;
 
 
+    [SerializeField] private GameObject notworthytext;
 
-// for score
+
+
+    // for score
     [SerializeField] public Text scoreText;
     [SerializeField] public static int theScore;
   
@@ -36,12 +40,16 @@ public class GM : MonoBehaviour
      [SerializeField] private GameObject exitGate;
 
      [SerializeField] private ParticleSystem GateEffect;
+
+
+
   
     void Awake()
     {
-
+        notworthytext.SetActive(false);
+        Alarm.Spotted = false;
         theScore = 0;
-
+        GateEffect.Stop();
         exitGate.SetActive(false);
         kryptoArtTick.SetActive(false);
         SymbolArtTick.SetActive(false);
@@ -68,7 +76,14 @@ public class GM : MonoBehaviour
         scoreText.text = "Collected: " + theScore;
 
 
-        
+        if (theScore > 0)
+        {
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "ArtifactsColected" , theScore);
+        }
+        else if (theScore == 3)
+        {
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "They Got all three Artifacts");
+        }
     
     
         if(theScore >= 1)
@@ -165,6 +180,15 @@ public class GM : MonoBehaviour
         exitGate.SetActive(true);
     }
 
+    public void thortext()
+    {
+        notworthytext.SetActive(true);
+        Invoke("thortextfalse", 2f);
+    }
     
+    public void thortextfalse()
+    {
+        notworthytext.SetActive(false);
+    }
 
 }
