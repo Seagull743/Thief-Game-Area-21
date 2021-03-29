@@ -80,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
         lerpHeight = originalHeight;
         isCrouching = false;
         isWalking = false;
+        playerCol.skinWidth = 0.37f;
        
     }
 
@@ -198,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
             speed = 3;
             bobFrequency = 1.5f;
             PPS.GetComponent<PostProcessingScript>().Crouchvignette();
-          
+            playerCol.skinWidth = 0.08f;
         }
                             
     }
@@ -210,6 +211,7 @@ public class PlayerMovement : MonoBehaviour
         isCrouching = false;
         speed = 6;
         bobFrequency = 3f;
+        playerCol.skinWidth = 0.37f;
         PPS.GetComponent<PostProcessingScript>().unCoruchvignette();
 
     }
