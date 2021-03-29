@@ -198,6 +198,7 @@ public class PlayerMovement : MonoBehaviour
             speed = 3;
             bobFrequency = 1.5f;
             PPS.GetComponent<PostProcessingScript>().Crouchvignette();
+          
         }
                             
     }
