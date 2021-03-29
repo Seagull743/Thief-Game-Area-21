@@ -62,13 +62,7 @@ public class CameraDetection : MonoBehaviour
         }
     }
 
-    public void PlayAlarmSound()
-    {
-        
-    }
-
-
-    public void CheckPlayer()
+        public void CheckPlayer()
     {
         //Debug.LogError("It's running");
 
@@ -77,7 +71,6 @@ public class CameraDetection : MonoBehaviour
             Vector3 heading = targets.playerTargetPoints[i].position - CamRaycastPoint.position;
             float distance = heading.magnitude;
             Vector3 direction = heading / distance;
-
             RaycastHit hit;
             if (Physics.Raycast(CamRaycastPoint.position, direction, out hit, 30f, ~ConeVision))
             {

@@ -61,17 +61,7 @@ public class PlayerMovement : MonoBehaviour
     public float standUpHeight = 0.5f;
     private bool forcedCrouch;
 
-
-
     //Player FoorSteps
-
-   
-
-
-    void Awake()
-    {
-           
-    }
 
 
     void Start()    {
@@ -96,8 +86,7 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
- 
- 
+  
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -147,19 +136,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl))
         {
             Crouch();
-       
-           
+              
         }
-       
-         
+             
         else if (!Input.GetKey(KeyCode.LeftControl) && !isabove && isCrouching)
         {
             unCrouch();
         }
-
- 
-       
-           
 
 
        // Vector3 scale = transform.localScale;
@@ -168,8 +151,7 @@ public class PlayerMovement : MonoBehaviour
         playerCol.height = Mathf.Lerp(playerCol.height, lerpHeight, 0.1f);
 
         //Camera Bobbing
-
-        
+      
         // Set time and offset to 0
         if (!isWalking)
         {

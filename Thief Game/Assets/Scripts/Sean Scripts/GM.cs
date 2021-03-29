@@ -93,8 +93,7 @@ public class GM : MonoBehaviour
         }
         else if(Alarm.Spotted == true)
         {
-            SpawnExitGate();
-            GateEffect.Play();
+            SpawnExitGate();       
         }
         else
         {
@@ -178,6 +177,7 @@ public class GM : MonoBehaviour
     public void SpawnExitGate()
     {
         exitGate.SetActive(true);
+        GateEffect.Play();
     }
 
     public void thortext()

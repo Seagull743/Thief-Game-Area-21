@@ -8,7 +8,10 @@ public class Alarm : MonoBehaviour
     public float RotateSpeed;
     public GameObject light1;
     public GameObject light2;
-    public GameObject[] LightBeam;
+    public GameObject[] LightBeam1;
+    public GameObject[] LightBeam2;
+
+    
     public static bool Spotted = false;
 
 
@@ -24,6 +27,11 @@ public class Alarm : MonoBehaviour
         light1.SetActive(false);
         light2.SetActive(false);
         escapetext.SetActive(false);
+        
+        foreach(GameObject g in LightBeam2)
+        {
+            g.SetActive(false);
+        }
        
     }
 
@@ -51,9 +59,14 @@ public class Alarm : MonoBehaviour
     public void StartSpinning()
     {
         // add for each loop
-        foreach (GameObject g in LightBeam)
+        foreach (GameObject g in LightBeam1)
         {
             g.SetActive(false);
+        }
+
+        foreach(GameObject g in LightBeam2)
+        {
+            g.SetActive(true);
         }
 
         Invoke("spinning", 2.0f);
