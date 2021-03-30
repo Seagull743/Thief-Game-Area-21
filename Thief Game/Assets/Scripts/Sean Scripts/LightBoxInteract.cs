@@ -9,10 +9,18 @@ public class LightBoxInteract : InteractiveObject
     public Animator anim;
     public GM gm;
 
+    public GameObject[] bluewire;
+ 
 
     void Start()
     {
         anim.GetComponent<Animator>();
+        
+        foreach (GameObject g in bluewire)
+        {
+            g.SetActive(true);
+        }
+
     }
 
 
@@ -21,7 +29,13 @@ public class LightBoxInteract : InteractiveObject
         anim.SetBool("turnoff", true);
         FindObjectOfType<AudioM>().Play("LightSwitch");
         LB.GetComponent<LightBox>().TurnOffBox();
-        gm.GetComponent<GM>().Normalcross();    
+        gm.GetComponent<GM>().Normalcross();
+
+        foreach (GameObject g in bluewire)
+        {
+            g.SetActive(false);
+        }
+
     }
 
 }

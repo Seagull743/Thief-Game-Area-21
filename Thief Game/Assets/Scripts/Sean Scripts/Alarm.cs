@@ -10,8 +10,8 @@ public class Alarm : MonoBehaviour
     public GameObject light2;
     public GameObject[] LightBeam1;
     public GameObject[] LightBeam2;
+    public GameObject[] LightBeamAnim;
 
-    
     public static bool Spotted = false;
 
 
@@ -32,7 +32,12 @@ public class Alarm : MonoBehaviour
         {
             g.SetActive(false);
         }
-       
+
+        foreach (GameObject g in LightBeamAnim)
+        {
+            g.GetComponent<Animator>();
+            g.GetComponent<Animator>().enabled = true;
+        }
     }
 
     void Update()
@@ -67,6 +72,11 @@ public class Alarm : MonoBehaviour
         foreach(GameObject g in LightBeam2)
         {
             g.SetActive(true);
+        }
+
+        foreach (GameObject g in LightBeamAnim)
+        {
+            g.GetComponent<Animator>().enabled = false;
         }
 
         Invoke("spinning", 2.0f);
